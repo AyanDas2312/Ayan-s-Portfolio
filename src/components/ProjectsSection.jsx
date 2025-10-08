@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Movie Recommendation System",
     description: "A movie recommendation system built with python, scikit-learn, and Streamlit.",
-    image: "/projects/project1.png",
+    image: "projects/pic1.jpg",
     tags: ["Python", "scikit-learn", "Streamlit", "Machine Learning"],
     demoUrl: "#",
     githubUrl: "#",
@@ -25,7 +25,7 @@ const projects = [
     title: "E-commerce Platform",
     description:
       "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
+    image: "projects/pic3.jpg",
     tags: ["Python", "Django", "PostgreSQL"],
     demoUrl: "#",
     githubUrl: "#",
