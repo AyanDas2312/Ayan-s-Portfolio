@@ -24,13 +24,23 @@ export const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
-    
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY);
+    setTimeout(async () => {
+      // emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY);
+
+      const formData = new FormData(e.target);
+      <input type="hidden" name="access_key" value="a967de5c-afb9-41fb-a10f-f976c8404814"></input>
+
+      formData.append("access_key", "a967de5c-afb9-41fb-a10f-f976c8404814");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
