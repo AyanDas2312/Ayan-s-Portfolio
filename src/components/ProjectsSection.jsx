@@ -1,11 +1,12 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { RevealOnScroll } from "./RevealOnScroll";
 
 const projects = [
   {
     id: 1,
     title: "Movie Recommendation System",
     description: "A movie recommendation system built with python, scikit-learn, and Streamlit.",
-    image: "projects/pic1.jpg",
+    image: "Projects/pic1.png",
     tags: ["Python", "scikit-learn", "Streamlit", "Machine Learning"],
     demoUrl: "#",
     githubUrl: "#",
@@ -25,7 +26,7 @@ const projects = [
     title: "E-commerce Platform",
     description:
       "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "projects/pic3.jpg",
+    image: "Projects/pic3.png",
     tags: ["Python", "Django", "PostgreSQL"],
     demoUrl: "#",
     githubUrl: "#",
@@ -35,6 +36,7 @@ const projects = [
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
+      <RevealOnScroll>
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           {" "}
@@ -106,6 +108,7 @@ export const ProjectsSection = () => {
           </a>
         </div>
       </div>
+      </RevealOnScroll>
     </section>
   );
 };

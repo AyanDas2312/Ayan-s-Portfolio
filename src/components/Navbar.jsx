@@ -36,7 +36,7 @@ export const Navbar = () => {
         >
           <span className="relative z-10">
             <span className="h-8 w-8 rounded-full overflow-hidden">
-              <img src="projects/Ayan_pic_prof.jpg" alt="" />
+              <img src="Projects/logo.jpg" alt="" />
             </span>
             <span className="text-glow text-foreground"> AD </span>{" "}
             Portfolio
